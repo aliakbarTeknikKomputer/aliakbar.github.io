@@ -1,121 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Digital | Ali Akbar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Portofolio Digital | Ali Akbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* --- CSS SAMA SEPERTI SEBELUMNYA --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         :root { --bg-dark: #080b11; --bg-card: #111622; --bg-card-hover: #171e2e; --accent-orange: #ff6b00; --accent-yellow: #ffb800; --text-main: #f1f5f9; --text-muted: #94a3b8; --border-color: #1e293b; }
-        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; padding-bottom: 40px; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
         nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--border-color); }
-        .logo { font-size: 1.5rem; font-weight: 800; color: #fff; }
-        .logo span { color: var(--accent-orange); }
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav ul li a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
-        nav ul li a:hover { color: var(--accent-orange); }
-        .hero { display: flex; align-items: center; padding: 80px 0; gap: 40px; }
-        .hero-text { flex: 1; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #fff; } .logo span { color: var(--accent-orange); }
+        nav ul { display: flex; list-style: none; gap: 30px; } nav ul li a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; } nav ul li a:hover { color: var(--accent-orange); }
+        .hero { display: flex; align-items: center; padding: 80px 0; gap: 40px; } .hero-text { flex: 1; }
         .badge { display: inline-block; background: rgba(255, 107, 0, 0.1); color: var(--accent-orange); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(255, 107, 0, 0.2); }
-        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; color: #fff; }
-        h1 span { background: linear-gradient(45deg, var(--accent-orange), var(--accent-yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
-        .btn-primary { background: linear-gradient(45deg, var(--accent-orange), var(--accent-yellow)); color: #000; }
-        .btn-secondary { border: 1px solid var(--border-color); color: var(--text-main); }
-        section { padding: 80px 0 40px 0; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
-        .card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent-orange); }
+        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; color: #fff; } h1 span { background: linear-gradient(45deg, var(--accent-orange), var(--accent-yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 1.3rem; color: var(--accent-orange); font-weight: 500; margin-bottom: 20px; }
+        .btn-group { display: flex; gap: 15px; } .btn { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-primary { background: linear-gradient(45deg, var(--accent-orange), var(--accent-yellow)); color: #000; } .btn-secondary { border: 1px solid var(--border-color); color: var(--text-main); }
+        section { padding: 80px 0 40px 0; } .section-header { text-align: center; margin-bottom: 50px; } .section-header h2 { font-size: 2rem; } .section-header h2 span { color: var(--accent-orange); } .section-header p { color: var(--text-muted); font-size: 0.95rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; } .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
+        .card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; transition: 0.3s; } .card:hover { transform: translateY(-5px); border-color: var(--accent-orange); }
         .icon-box { width: 50px; height: 50px; background: rgba(255, 107, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--accent-orange); font-size: 1.4rem; }
-        .info-list { list-style: none; }
-        .info-list li { display: flex; margin-bottom: 15px; }
-        .label { width: 120px; color: var(--text-muted); }
-        .val { font-weight: 600; flex: 1; }
-        .timeline { list-style: none; padding-left: 20px; border-left: 2px solid var(--border-color); }
-        .timeline-item { margin-bottom: 25px; position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: -26px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-orange); }
+        .project-list { list-style: none; margin-top: 15px; } .project-list li { margin-bottom: 8px; font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 10px; } .project-list li i { color: var(--accent-orange); margin-top: 4px; }
+        .info-list { list-style: none; } .info-list li { display: flex; margin-bottom: 15px; } .label { width: 120px; color: var(--text-muted); } .val { font-weight: 600; flex: 1; }
+        .timeline { list-style: none; padding-left: 20px; border-left: 2px solid var(--border-color); } .timeline-item { margin-bottom: 25px; position: relative; } .timeline-item::before { content: ''; position: absolute; left: -26px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-orange); }
         @media (max-width: 968px) { .hero { flex-direction: column-reverse; text-align: center; } nav ul { display: none; } }
     </style>
 </head>
 <body>
-
 <div class="container">
     <nav>
         <div class="logo">Ali<span>Akbar</span></div>
-        <ul>
-            <li><a href="#tentang">Tentang</a></li>
-            <li><a href="#layanan">Layanan</a></li>
-            <li><a href="#praktikum">Proyek</a></li>
-            <li><a href="#kontak">Hubungi</a></li>
-        </ul>
+        <ul><li><a href="#tentang">Tentang</a></li><li><a href="#layanan">Layanan</a></li><li><a href="#praktikum">Proyek</a></li><li><a href="#kontak">Hubungi</a></li></ul>
     </nav>
-
     <section class="hero" id="tentang">
         <div class="hero-text">
             <span class="badge">Selamat Datang di Portofolio Saya</span>
             <h1>Halo, Saya <br><span>Ali Akbar</span></h1>
             <h2>Mahasiswa D3 Teknik Komputer</h2>
             <p>Mahasiswa Teknik Komputer yang berfokus pada pengembangan jaringan, keamanan siber, dan infrastruktur IT. Memiliki minat besar pada implementasi solusi sistem dan manajemen data.</p>
-            <div class="btn-group" style="display: flex; gap: 15px;">
-                <a href="mailto:250104004@mhs.udb.ac.id" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email</a>
-                <a href="https://wa.me/6281575582809" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-            </div>
+            <div class="btn-group"><a href="mailto:250104004@mhs.udb.ac.id" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email</a><a href="https://wa.me/6281575582809" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
         </div>
     </section>
-
     <section id="praktikum">
-        <div class="section-header">
-            <h2>Proyek & <span>Praktikum</span></h2>
-            <p>Dokumentasi teknis materi kuliah dan proyek IT semester 1-2</p>
-        </div>
+        <div class="section-header"><h2>Proyek & <span>Praktikum</span></h2><p>Dokumentasi teknis materi kuliah dan proyek IT semester 1-2</p></div>
         <div class="grid-3">
-            <!-- 1. ZeroTier -->
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
-                <h3>Implementasi ZeroTier</h3>
-                <p>Membangun jaringan VPN Mesh aman untuk konektivitas jarak jauh antar perangkat menggunakan ZeroTier One.</p>
+                <div style="display: flex; gap: 8px; margin-bottom: 15px;"><img src="elektronika1.jpg" style="width: 50%; height: 120px; object-fit: cover; border-radius: 8px;"><img src="elektronika2.jpg" style="width: 50%; height: 120px; object-fit: cover; border-radius: 8px;"></div>
+                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div><h3>IoT Alat Deteksi Telur</h3>
+                <ul class="project-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Merancang hardware deteksi berbasis Arduino & sensor LDR.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Integrasi LCD I2C untuk monitoring status kualitas secara real-time.</li>
+                </ul>
             </div>
-            <!-- 2. DRC -->
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-database"></i></div>
-                <h3>Disaster Recovery (DRC)</h3>
-                <p>Perancangan strategi redundansi data dan pemulihan sistem untuk meminimalisir RPO & RTO saat gangguan.</p>
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div><h3>Implementasi ZeroTier VPN</h3>
+                <ul class="project-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Membangun jaringan VPN Mesh terenkripsi untuk akses remote.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Optimalisasi konektivitas data antar perangkat jarak jauh.</li>
+                </ul>
             </div>
-            <!-- 3. Clickjacking -->
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                <h3>Clickjacking Checker</h3>
-                <p>Pengembangan tools penguji keamanan web dari serangan clickjacking berbasis Python (Flask) dan Docker.</p>
+                <img src="jaringan1.jpg" style="width: 100%; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 8px;">
+                <div style="display: flex; gap: 8px; margin-bottom: 15px;"><img src="jaringan2.jpg" style="width: 50%; height: 80px; object-fit: cover; border-radius: 8px;"><img src="jaringan3.jpg" style="width: 50%; height: 80px; object-fit: cover; border-radius: 8px;"></div>
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div><h3>Clickjacking Checker</h3>
+                <ul class="project-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Script penguji keamanan web dengan Python Flask.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Kontainerisasi sistem menggunakan Docker untuk deployment efisien.</li>
+                </ul>
             </div>
-            <!-- 4. Cisco -->
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-route"></i></div>
-                <h3>Simulasi Cisco Packet Tracer</h3>
-                <p>Konfigurasi topologi jaringan, routing statis/dinamis, VLAN, dan manajemen subnetting.</p>
+                <div class="icon-box"><i class="fa-solid fa-route"></i></div><h3>Cisco Packet Tracer</h3>
+                <ul class="project-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Desain topologi jaringan enterprise dan routing statis/dinamis.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Konfigurasi VLAN, subnetting VLSM, dan inter-VLAN routing.</li>
+                </ul>
             </div>
-            <!-- 5. Jaringan Dasar -->
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-ethernet"></i></div>
-                <h3>Praktikum Jaringan Dasar</h3>
-                <p>Manajemen bandwidth lokal, instalasi kabel LAN, serta konfigurasi sharing data antar OS (Windows/Linux).</p>
+                <div class="icon-box"><i class="fa-solid fa-ethernet"></i></div><h3>Praktikum Jaringan Dasar</h3>
+                <ul class="project-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Instalasi infrastruktur fisik LAN dan manajemen bandwidth.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Setup sharing data antar sistem operasi (Windows/Linux).</li>
+                </ul>
             </div>
-            <!-- 6. Hardware & OS -->
             <div class="card">
-                <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
-                <h3>Hardware & OS</h3>
-                <p>Praktik perakitan PC, instalasi sistem operasi, dan troubleshooting komponen komputer dasar.</p>
+                <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div><h3>Hardware & OS</h3>
+                <ul class="project-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Praktik perakitan komponen PC & Troubleshooting sistem.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Manajemen optimasi driver dan sistem operasi.</li>
+                </ul>
             </div>
         </div>
     </section>
-
-    <!-- PENDIDIKAN & INFO -->
     <section id="info">
         <div class="grid-2">
             <div class="card">
@@ -129,24 +105,13 @@
             <div class="card">
                 <h3>Riwayat Akademik</h3>
                 <ul class="timeline" style="margin-top: 20px;">
-                    <li class="timeline-item">
-                        <div style="font-size: 0.8rem; color: var(--accent-orange);">Semester 2</div>
-                        <div>Fokus: Komunikasi Data, Troubleshooting Jaringan & Keamanan.</div>
-                    </li>
-                    <li class="timeline-item">
-                        <div style="font-size: 0.8rem; color: var(--accent-orange);">Semester 1</div>
-                        <div>Fokus: Dasar Pemrograman, Hardware, OS, & Logika.</div>
-                    </li>
+                    <li class="timeline-item"><div style="font-size: 0.8rem; color: var(--accent-orange);">Semester 2</div><div>Fokus: Komunikasi Data, Troubleshooting Jaringan & Keamanan.</div></li>
+                    <li class="timeline-item"><div style="font-size: 0.8rem; color: var(--accent-orange);">Semester 1</div><div>Fokus: Dasar Pemrograman, Hardware, OS, & Logika.</div></li>
                 </ul>
             </div>
         </div>
     </section>
-
 </div>
-
-<footer style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border-color);">
-    <p>&copy; 2026 Ali Akbar | Mahasiswa Teknik Komputer UDB</p>
-</footer>
-
+<footer style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border-color);"><p>&copy; 2026 Ali Akbar | Mahasiswa Teknik Komputer UDB</p></footer>
 </body>
 </html>
