@@ -3,526 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Ali Akbar</title>
-    <!-- FontAwesome untuk Ikon -->
+    <title>Portofolio Digital | Ali Akbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-orange: #f97316;
-            --accent-blue: #38bdf8;
-            --border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding-bottom: 40px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #fff;
-        }
-
-        nav .logo span {
-            color: var(--accent-orange);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent-orange);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            padding: 60px 0;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .badge {
-            background: rgba(249, 115, 22, 0.1);
-            color: var(--accent-orange);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        .hero-text h1 {
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-
-        .hero-text h1 span {
-            color: var(--accent-orange);
-        }
-
-        .hero-text h2 {
-            font-size: 1.3rem;
-            color: var(--accent-blue);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-orange);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: #ea580c;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #fff;
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(255,255,255,0.05);
-        }
-
-        .hero-img {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .profile-wrapper {
-            width: 280px;
-            height: 350px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 3px solid var(--accent-orange);
-        }
-
-        .profile-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* SECTIONS GENERAL */
-        section {
-            padding: 60px 0 20px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-header h2 {
-            font-size: 2rem;
-        }
-
-        .section-header h2 span {
-            color: var(--accent-orange);
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* GRIDS & CARDS */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 25px;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(249, 115, 22, 0.3);
-        }
-
-        .icon-box {
-            width: 45px;
-            height: 45px;
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            font-size: 1.25rem;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* INFO & TIMELINE */
-        .info-list {
-            list-style: none;
-        }
-
-        .info-list li {
-            display: flex;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 10px;
-        }
-
-        .info-list .label {
-            width: 100px;
-            color: var(--accent-blue);
-            font-weight: 500;
-        }
-
-        .info-list .val {
-            flex: 1;
-            color: var(--text-color);
-        }
-
-        .timeline {
-            list-style: none;
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid var(--border-color);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -26px;
-            top: 5px;
-            width: 10px;
-            height: 10px;
-            background-color: var(--accent-orange);
-            border-radius: 50%;
-        }
-
-        .timeline-time {
-            font-size: 0.8rem;
-            color: var(--accent-blue);
-            font-weight: 600;
-        }
-
-        .timeline-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        .timeline-desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* PROJECT LISTS */
-        .project-list {
-            list-style-type: none;
-            margin-top: 10px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            padding-left: 0;
-        }
-        
-        .project-list li {
-            margin-bottom: 6px;
-            display: flex;
-            gap: 6px;
-            align-items: flex-start;
-            text-align: left;
-        }
-        
-        .project-list li i {
-            color: var(--accent-blue);
-            margin-top: 4px;
-            font-size: 0.75rem;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            .btn-group {
-                justify-content: center;
-            }
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
+        /* --- CSS SAMA SEPERTI SEBELUMNYA --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        :root { --bg-dark: #080b11; --bg-card: #111622; --bg-card-hover: #171e2e; --accent-orange: #ff6b00; --accent-yellow: #ffb800; --text-main: #f1f5f9; --text-muted: #94a3b8; --border-color: #1e293b; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--border-color); }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #fff; }
+        .logo span { color: var(--accent-orange); }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav ul li a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        nav ul li a:hover { color: var(--accent-orange); }
+        .hero { display: flex; align-items: center; padding: 80px 0; gap: 40px; }
+        .hero-text { flex: 1; }
+        .badge { display: inline-block; background: rgba(255, 107, 0, 0.1); color: var(--accent-orange); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(255, 107, 0, 0.2); }
+        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; color: #fff; }
+        h1 span { background: linear-gradient(45deg, var(--accent-orange), var(--accent-yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+        .btn-primary { background: linear-gradient(45deg, var(--accent-orange), var(--accent-yellow)); color: #000; }
+        .btn-secondary { border: 1px solid var(--border-color); color: var(--text-main); }
+        section { padding: 80px 0 40px 0; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
+        .card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 16px; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-orange); }
+        .icon-box { width: 50px; height: 50px; background: rgba(255, 107, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--accent-orange); font-size: 1.4rem; }
+        .info-list { list-style: none; }
+        .info-list li { display: flex; margin-bottom: 15px; }
+        .label { width: 120px; color: var(--text-muted); }
+        .val { font-weight: 600; flex: 1; }
+        .timeline { list-style: none; padding-left: 20px; border-left: 2px solid var(--border-color); }
+        .timeline-item { margin-bottom: 25px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -26px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-orange); }
+        @media (max-width: 968px) { .hero { flex-direction: column-reverse; text-align: center; } nav ul { display: none; } }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- NAVBAR -->
-        <nav>    
-            <div class="logo">Ali<span>Akbar</span></div>    
-            <ul>    
-                <li><a href="#tentang">Tentang</a></li>    
-                <li><a href="#layanan">Layanan</a></li>    
-                <li><a href="#praktikum">Proyek</a></li>    
-                <li><a href="#kontak">Hubungi</a></li>    
-            </ul>    
-        </nav>    
+<div class="container">
+    <nav>
+        <div class="logo">Ali<span>Akbar</span></div>
+        <ul>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#praktikum">Proyek</a></li>
+            <li><a href="#kontak">Hubungi</a></li>
+        </ul>
+    </nav>
 
-        <!-- HERO SECTION -->    
-        <section class="hero" id="tentang">    
-            <div class="hero-text">    
-                <span class="badge">Selamat Datang di Portofolio Saya</span>    
-                <h1>Halo, Saya <br><span>Ali Akbar</span></h1>    
-                <h2>Mahasiswa D3 Teknik Komputer</h2>    
-                <p>Mahasiswa D3 Teknik Komputer yang memiliki keahlian dalam administrasi jaringan, dasar pemrograman perangkat keras (IoT), serta kemampuan manajemen aset media digital untuk kebutuhan operasional IT perusahaan.</p>    
-                <div class="btn-group">    
-                    <a href="mailto:aliakbarcah8f@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Saya</a>    
-                    <a href="https://wa.me/6281575582809" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>    
-                </div>    
-            </div>    
-            <div class="hero-img">    
-                <div class="profile-wrapper">    
-                    <img src="1780544242650.png" alt="Foto Profil Ali Akbar">    
-                </div>    
-            </div>    
-        </section>    
+    <section class="hero" id="tentang">
+        <div class="hero-text">
+            <span class="badge">Selamat Datang di Portofolio Saya</span>
+            <h1>Halo, Saya <br><span>Ali Akbar</span></h1>
+            <h2>Mahasiswa D3 Teknik Komputer</h2>
+            <p>Mahasiswa Teknik Komputer yang berfokus pada pengembangan jaringan, keamanan siber, dan infrastruktur IT. Memiliki minat besar pada implementasi solusi sistem dan manajemen data.</p>
+            <div class="btn-group" style="display: flex; gap: 15px;">
+                <a href="mailto:250104004@mhs.udb.ac.id" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://wa.me/6281575582809" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- LAYANAN & KEAHLIAN (SERVICES) -->    
-        <section id="layanan">    
-            <div class="section-header">    
-                <h2>Layanan & <span>Keahlian</span></h2>    
-                <p>Kompetensi teknis lapangan dan dokumentasi yang saya miliki</p>    
-            </div>    
-            <div class="grid-3">    
-                <div class="card">    
-                    <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>    
-                    <h3>Dasar Jaringan & LAN</h3>    
-                    <p>Mempelajari teori dasar jaringan komputer, pengenalan perangkat keras jaringan (Switch/Router), serta praktik dasar pembuatan dan penataan kabel LAN.</p>    
-                </div>    
-                <div class="card">    
-                    <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>    
-                    <h3>Jaringan Nirkabel</h3>    
-                    <p>Memahami dasar-dasar wireless network, manajemen frekuensi, konfigurasi access point, serta implementasi enkripsi keamanan nirkabel.</p>    
-                </div>    
-                <div class="card">    
-                    <div class="icon-box"><i class="fa-solid fa-palette"></i></div>    
-                    <h3>Akses & Desain Canva</h3>    
-                    <p>Bisa mengakses Canva untuk membantu pembuatan visualisasi laporan teknis kuliah, diagram alur, poster informasi, dan materi presentasi agar lebih rapi.</p>    
-                </div>    
-            </div>    
-        </section>    
+    <section id="praktikum">
+        <div class="section-header">
+            <h2>Proyek & <span>Praktikum</span></h2>
+            <p>Dokumentasi teknis materi kuliah dan proyek IT semester 1-2</p>
+        </div>
+        <div class="grid-3">
+            <!-- 1. ZeroTier -->
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>Implementasi ZeroTier</h3>
+                <p>Membangun jaringan VPN Mesh aman untuk konektivitas jarak jauh antar perangkat menggunakan ZeroTier One.</p>
+            </div>
+            <!-- 2. DRC -->
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-database"></i></div>
+                <h3>Disaster Recovery (DRC)</h3>
+                <p>Perancangan strategi redundansi data dan pemulihan sistem untuk meminimalisir RPO & RTO saat gangguan.</p>
+            </div>
+            <!-- 3. Clickjacking -->
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Clickjacking Checker</h3>
+                <p>Pengembangan tools penguji keamanan web dari serangan clickjacking berbasis Python (Flask) dan Docker.</p>
+            </div>
+            <!-- 4. Cisco -->
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-route"></i></div>
+                <h3>Simulasi Cisco Packet Tracer</h3>
+                <p>Konfigurasi topologi jaringan, routing statis/dinamis, VLAN, dan manajemen subnetting.</p>
+            </div>
+            <!-- 5. Jaringan Dasar -->
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-ethernet"></i></div>
+                <h3>Praktikum Jaringan Dasar</h3>
+                <p>Manajemen bandwidth lokal, instalasi kabel LAN, serta konfigurasi sharing data antar OS (Windows/Linux).</p>
+            </div>
+            <!-- 6. Hardware & OS -->
+            <div class="card">
+                <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Hardware & OS</h3>
+                <p>Praktik perakitan PC, instalasi sistem operasi, dan troubleshooting komponen komputer dasar.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- PROYEK & PRAKTIKUM (PROJECTS) -->    
-        <section id="praktikum">    
-            <div class="section-header">    
-                <h2>Proyek & <span>Praktikum</span></h2>    
-                <p>Dokumentasi pengalaman praktis pengerjaan proyek IT (Semester 1-2)</p>    
-            </div>    
-            <div class="grid-3">    
-                <!-- Proyek 1: Alat Deteksi Telur Busuk -->    
-                <div class="card">    
-                    <div style="display: flex; gap: 8px; margin-bottom: 15px;">
-                        <img src="IMG-20260705-WA0000.jpg
-                          n" alt="Foto Box Alat" style="width: 50%; height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="elektronika2.jpg" alt="Skema Rangkaian" style="width: 50%; height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                    </div>
-                    <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>    
-                    <h3>IoT Alat Deteksi Telur Busuk</h3>    
-                    <ul class="project-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Merancang arsitektur hardware berbasis Arduino Uno dan mengintegrasikan sensor LDR.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Melakukan kalibrasi sensor untuk membaca tingkat intensitas cahaya pada telur secara otomatis.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Memasang layar LCD I2C untuk menampilkan status kualitas kebusukan telur secara real-time.</li>
-                    </ul>
-                </div>    
-                <!-- Proyek 2: ZeroTier -->    
-                <div class="card">    
-                    <div class="icon-box"><i class="fa-solid fa-circle-nodes"></i></div>    
-                    <h3>Implementasi ZeroTier VPN</h3>    
-                    <ul class="project-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Konfigurasi Virtual Private Network (VPN) Mesh menggunakan platform ZeroTier One.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Menghubungkan konektivitas data dan komunikasi jarak jauh terenkripsi antar perangkat.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Melakukan pengujian routing aman untuk memvalidasi kestabilan lalu lintas data jaringan.</li>
-                    </ul>
-                </div>    
-                <!-- Proyek 3: Clickjacking Checker Tool -->    
-                <div class="card">    
-                    <img src="jaringan1.jpg" alt="Tampilan Web UI" style="width: 100%; height: 130px; object-fit: cover; border-radius: 6px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <div style="display: flex; gap: 8px; margin-bottom: 15px;">
-                        <img src="jaringan2.jpg" alt="Docker Desktop" style="width: 50%; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="jaringan3.jpg" alt="Bukti CMD Build" style="width: 50%; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                    </div>
-                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>    
-                    <h3>Clickjacking Checker Tool</h3>    
-                    <ul class="project-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Mengembangkan script tools penguji celah keamanan web berbasis Python Flask Framework.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Mengimplementasikan kontainerisasi sistem menggunakan Docker untuk efisiensi deployment.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Menganalisis respon HTTP Headers keamanan seperti X-Frame-Options pada target domain.</li>
-                    </ul>
-                </div>    
-                <!-- Proyek 4: Jaringan Nirkabel -->    
-                <div class="card">    
-                    <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>    
-                    <h3>Jaringan Nirkabel (Wireless)</h3>    
-                    <ul class="project-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Melakukan instalasi perangkat keras serta manajemen konfigurasi Access Point lokal.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Menerapkan standar protokol enkripsi nirkabel tingkat lanjut (WPA2 dan WPA3).</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Mengoptimalkan distribusi pembagian frekuensi sinyal wifi untuk meminimalkan interferensi.</li>
-                    </ul>
-                </div>    
-                <!-- Proyek 5: Simulasi Jaringan Cisco -->    
-                <div class="card">    
-                    <div class="icon-box"><i class="fa-solid fa-route"></i></div>    
-                    <h3>Simulasi Jaringan Cisco</h3>    
-                    <ul class="project-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Mendesain topologi arsitektur jaringan komputer enterprise dengan Cisco Packet Tracer.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Konfigurasi routing statis, switching, distribusi alokasi VLAN, serta inter-VLAN routing.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Mengatur manajemen pembagian subnetting IP Address (VLSM) untuk efisiensi node jaringan.</li>
-                    </ul>
-                </div>    
-                <!-- Proyek 6: Pembuatan Media Canva -->    
-                <div class="card">    
-                    <div class="icon-box"><i class="fa-solid fa-bezier-curve"></i></div>    
-                    <h3>Pembuatan Media Canva</h3>    
-                    <ul class="project-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Memanfaatkan Canva untuk mendesain diagram visual alur sistem jaringan komputer secara detail.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Menyusun dokumentasi tata letak laporan praktikum teknis agar terstruktur dengan rapi.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Merancang media presentasi infografis interaktif untuk pemaparan materi akademik kelompok.</li>
-                    </ul>
-                </div>    
-            </div>    
-        </section>    
+    <!-- PENDIDIKAN & INFO -->
+    <section id="info">
+        <div class="grid-2">
+            <div class="card">
+                <h3>Data Pribadi</h3>
+                <ul class="info-list" style="margin-top: 20px;">
+                    <li><span class="label">Status</span><span class="val">Mahasiswa Aktif</span></li>
+                    <li><span class="label">Semester</span><span class="val">2 (Teknik Komputer)</span></li>
+                    <li><span class="label">Keahlian</span><span class="val">Jaringan, Python, IT Security</span></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Riwayat Akademik</h3>
+                <ul class="timeline" style="margin-top: 20px;">
+                    <li class="timeline-item">
+                        <div style="font-size: 0.8rem; color: var(--accent-orange);">Semester 2</div>
+                        <div>Fokus: Komunikasi Data, Troubleshooting Jaringan & Keamanan.</div>
+                    </li>
+                    <li class="timeline-item">
+                        <div style="font-size: 0.8rem; color: var(--accent-orange);">Semester 1</div>
+                        <div>Fokus: Dasar Pemrograman, Hardware, OS, & Logika.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <!-- DATA DIRI & RIWAYAT PENDIDIKAN -->    
-        <section id="info">    
-            <div class="grid-2">    
-                <!-- Info Pribadi -->    
-                <div class="card">
-                    <h3><i class="fa-solid fa-user" style="color: var(--accent-orange); margin-right: 10px;"></i> Data Pribadi</h3>    
-                    <div style="margin-top: 25px;">    
-                        <ul class="info-list">    
-                            <li><span class="label">TTL</span><span class="val">Sukoharjo, 1 November 2006</span></li>    
-                            <li><span class="label">Alamat</span><span class="val">Tanjung, Bakalan, Polokarto, Sukoharjo (RT 04 / RW 09)</span></li>    
-                            <li><span class="label">Status</span><span class="val">Mahasiswa Aktif</span></li>    
-                            <li><span class="label">Keahlian</span><span class="val">Jaringan Komputer, IoT Arduino, Cisco Packet Tracer, Canva</span></li>    
-                        </ul>    
-                    </div>    
-                </div>    
+</div>
 
-                <!-- Pendidikan -->    
-                <div class="card">    
-                    <h3><i class="fa-solid fa-graduation-cap" style="color: var(--accent-orange); margin-right: 10px;"></i> Riwayat Pendidikan</h3>    
-                    <div style=
+<footer style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid var(--border-color);">
+    <p>&copy; 2026 Ali Akbar | Mahasiswa Teknik Komputer UDB</p>
+</footer>
+
+</body>
+</html>
