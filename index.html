@@ -316,6 +316,29 @@
             color: var(--text-muted);
         }
 
+        /* PROJECT LISTS */
+        .project-list {
+            list-style-type: none;
+            margin-top: 10px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding-left: 0;
+        }
+        
+        .project-list li {
+            margin-bottom: 6px;
+            display: flex;
+            gap: 6px;
+            align-items: flex-start;
+            text-align: left;
+        }
+        
+        .project-list li i {
+            color: var(--accent-blue);
+            margin-top: 4px;
+            font-size: 0.75rem;
+        }
+
         /* FOOTER */
         footer {
             text-align: center;
@@ -412,46 +435,72 @@
             <div class="grid-3">    
                 <!-- Proyek 1: Alat Deteksi Telur Busuk -->    
                 <div class="card">    
-                    <img src="elektronika1.jpg" alt="Foto Box Alat" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 6px; margin-bottom: 8px;">
-                    <img src="elektronika2.jpg" alt="Skema Rangkaian" style="width: 100%; max-height: 140px; object-fit: cover; border-radius: 6px; margin-bottom: 12px;">
-                    
+                    <div style="display: flex; gap: 8px; margin-bottom: 15px;">
+                        <img src="elektronika1.jpg" alt="Foto Box Alat" style="width: 50%; height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+                        <img src="elektronika2.jpg" alt="Skema Rangkaian" style="width: 50%; height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
                     <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>    
                     <h3>IoT Alat Deteksi Telur Busuk</h3>    
-                    <p>Merancang dan membangun alat pendeteksi kualitas kebusukan telur berbasis Arduino menggunakan sensor LDR untuk membaca intensitas tingkat gelap/terangnya cahaya pada telur secara otomatis.</p>    
+                    <ul class="project-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Merancang arsitektur hardware berbasis Arduino Uno dan mengintegrasikan sensor LDR.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Melakukan kalibrasi sensor untuk membaca tingkat intensitas cahaya pada telur secara otomatis.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Memasang layar LCD I2C untuk menampilkan status kualitas kebusukan telur secara real-time.</li>
+                    </ul>
                 </div>    
                 <!-- Proyek 2: ZeroTier -->    
                 <div class="card">    
                     <div class="icon-box"><i class="fa-solid fa-circle-nodes"></i></div>    
                     <h3>Implementasi ZeroTier VPN</h3>    
-                    <p>Membangun infrastruktur Virtual Private Network (VPN) Mesh untuk menghubungkan konektivitas data dan komunikasi jarak jauh antar perangkat secara terenkripsi menggunakan ZeroTier One.</p>    
+                    <ul class="project-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Konfigurasi Virtual Private Network (VPN) Mesh menggunakan platform ZeroTier One.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Menghubungkan konektivitas data dan komunikasi jarak jauh terenkripsi antar perangkat.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Melakukan pengujian routing aman untuk memvalidasi kestabilan lalu lintas data jaringan.</li>
+                    </ul>
                 </div>    
                 <!-- Proyek 3: Clickjacking Checker Tool -->    
                 <div class="card">    
-                    <img src="jaringan1.jpg" alt="Tampilan Web UI" style="width: 100%; max-height: 130px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;">
-                    <img src="jaringan2.jpg" alt="Docker Desktop" style="width: 100%; max-height: 130px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;">
-                    <img src="jaringan3.jpg" alt="Bukti CMD Build" style="width: 100%; max-height: 130px; object-fit: cover; border-radius: 6px; margin-bottom: 12px;">
-                    
+                    <img src="jaringan1.jpg" alt="Tampilan Web UI" style="width: 100%; height: 130px; object-fit: cover; border-radius: 6px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="display: flex; gap: 8px; margin-bottom: 15px;">
+                        <img src="jaringan2.jpg" alt="Docker Desktop" style="width: 50%; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+                        <img src="jaringan3.jpg" alt="Bukti CMD Build" style="width: 50%; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
                     <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>    
                     <h3>Clickjacking Checker Tool</h3>    
-                    <p>Mengembangkan perangkat lunak penguji keamanan jaringan dan deteksi celah kerentanan web dari serangan clickjacking berbasis Python (Flask Framework) dan kontainerisasi Docker.</p>    
+                    <ul class="project-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Mengembangkan script tools penguji celah keamanan web berbasis Python Flask Framework.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mengimplementasikan kontainerisasi sistem menggunakan Docker untuk efisiensi deployment.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Menganalisis respon HTTP Headers keamanan seperti X-Frame-Options pada target domain.</li>
+                    </ul>
                 </div>    
                 <!-- Proyek 4: Jaringan Nirkabel -->    
                 <div class="card">    
                     <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>    
                     <h3>Jaringan Nirkabel (Wireless)</h3>    
-                    <p>Praktik konfigurasi Access Point, implementasi protokol keamanan nirkabel (WPA2/WPA3), serta optimalisasi distribusi sinyal dalam jaringan lokal.</p>    
+                    <ul class="project-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Melakukan instalasi perangkat keras serta manajemen konfigurasi Access Point lokal.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Menerapkan standar protokol enkripsi nirkabel tingkat lanjut (WPA2 dan WPA3).</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mengoptimalkan distribusi pembagian frekuensi sinyal wifi untuk meminimalkan interferensi.</li>
+                    </ul>
                 </div>    
                 <!-- Proyek 5: Simulasi Jaringan Cisco -->    
                 <div class="card">    
                     <div class="icon-box"><i class="fa-solid fa-route"></i></div>    
                     <h3>Simulasi Jaringan Cisco</h3>    
-                    <p>Mengonfigurasi topologi jaringan komputer dasar korporat, routing statis, switching, alokasi VLAN, dan manajemen subnetting IP Address dengan Cisco Packet Tracer.</p>    
+                    <ul class="project-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Mendesain topologi arsitektur jaringan komputer enterprise dengan Cisco Packet Tracer.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Konfigurasi routing statis, switching, distribusi alokasi VLAN, serta inter-VLAN routing.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mengatur manajemen pembagian subnetting IP Address (VLSM) untuk efisiensi node jaringan.</li>
+                    </ul>
                 </div>    
                 <!-- Proyek 6: Pembuatan Media Canva -->    
                 <div class="card">    
                     <div class="icon-box"><i class="fa-solid fa-bezier-curve"></i></div>    
                     <h3>Pembuatan Media Canva</h3>    
-                    <p>Bisa mengakses Canva untuk menyusun dan membuat visualisasi laporan tugas perkuliahan, infografis alur sistem jaringan, serta tata letak presentasi data.</p>    
+                    <ul class="project-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Memanfaatkan Canva untuk mendesain diagram visual alur sistem jaringan komputer secara detail.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Menyusun dokumentasi tata letak laporan praktikum teknis agar terstruktur dengan rapi.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Merancang media presentasi infografis interaktif untuk pemaparan materi akademik kelompok.</li>
+                    </ul>
                 </div>    
             </div>    
         </section>    
@@ -475,52 +524,4 @@
                 <!-- Pendidikan -->    
                 <div class="card">    
                     <h3><i class="fa-solid fa-graduation-cap" style="color: var(--accent-orange); margin-right: 10px;"></i> Riwayat Pendidikan</h3>    
-                    <div style="margin-top: 25px;">    
-                        <ul class="timeline">    
-                            <li class="timeline-item">    
-                                <div class="timeline-time">2025 - Sekarang</div>    
-                                <div class="timeline-title">D3 Teknik Komputer</div>    
-                                <div class="timeline-desc">Universitas Duta Bangsa</div>    
-                            </li>    
-                            <li class="timeline-item">    
-                                <div class="timeline-time">2023 - 2025</div>    
-                                <div class="timeline-title">SMA N 3 Sukoharjo</div>    
-                            </li>    
-                            <li class="timeline-item">    
-                                <div class="timeline-time">2020 - 2023</div>    
-                                <div class="timeline-title">SMP N 1 Polokarto</div>    
-                            </li>    
-                            <li class="timeline-item">    
-                                <div class="timeline-time">2014 - 2020</div>    
-                                <div class="timeline-title">MIM Tanjung</div>    
-                            </li>    
-                        </ul>    
-                    </div>    
-                </div>    
-            </div>    
-        </section>    
-
-        <!-- SECTION HUBUNGI SAYA -->    
-        <section id="kontak" style="text-align: center;">    
-            <div class="card" style="max-width: 700px; margin: 0 auto; padding: 40px 20px;">    
-                <h2 style="color: #fff; margin-bottom: 15px;">Tertarik untuk Bekerja Sama?</h2>    
-                <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 30px auto; font-size: 0.95rem;">    
-                    Saya sangat terbuka untuk kesempatan magang, proyek IT, atau diskusi seputar perkembangan teknologi komputer.    
-                </p>    
-                <div class="btn-group" style="justify-content: center;">    
-                    <a href="mailto:aliakbarcah8f@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Hubungi via Email</a>    
-                    <a href="https://wa.me/6281575582809" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>    
-                </div>    
-            </div>    
-        </section>
-
-        <!-- FOOTER -->    
-        <footer>    
-            <div class="container">    
-                <p>&copy; 2026 Ali Akbar | Mahasiswa Teknik Komputer UDB</p>    
-            </div>
-        </footer>
-    </div>
-
-</body>
-</html>
+                    <div style=
