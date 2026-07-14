@@ -1,180 +1,397 @@
-        <nav>
-            <div class="logo">Ali<span>Akbar</span></div>
-            <ul>
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#layanan">Layanan</a></li>
-                <li><a href="#praktikum">Proyek</a></li>
-                <li><a href="#kontak">Hubungi</a></li>
-            </ul>
-        </nav>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Ali Akbar</title>
 
-        <!-- HERO SECTION -->
-        <section class="hero" id="tentang">
-            <div class="hero-text">
-                <span class="badge">Selamat Datang di Portofolio Saya</span>
-                <h1>Halo, Saya <br><span>Ali Akbar</span></h1>
-                <h2>Mahasiswa D3 Teknik Komputer</h2>
-                <p>Mahasiswa D3 Teknik Komputer yang memiliki keahlian dalam administrasi jaringan, dasar pemrograman perangkat keras (IoT), serta kemampuan manajemen aset media digital untuk kebutuhan operasional IT perusahaan.</p>
-                <div class="btn-group">
-                    <a href="mailto:aliakbarcah8f@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Saya</a>
-                    <a href="https://wa.me/6281575582809" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                    <a href="https://github.com/aliakbarteknikkomputer" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
-                </div>
-            </div>
-            <div class="hero-img">
-                <div class="profile-wrapper">
-                    <img src="1780544242650.png" alt="Foto Profil Ali Akbar">
-                </div>
-            </div>
-        </section>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-        <!-- LAYANAN & KEAHLIAN (SERVICES) -->
-        <section id="layanan">
-            <div class="section-header">
-                <h2>Layanan & <span>Keahlian</span></h2>
-                <p>Kompetensi teknis lapangan dan dokumentasi yang saya miliki</p>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3>Dasar Jaringan & LAN</h3>
-                    <p>Mempelajari teori dasar jaringan komputer, pengenalan perangkat keras jaringan (Switch/Router), serta praktik dasar pembuatan dan penataan kabel LAN.</p>
-                </div>
-                <div class="card">
-                    <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
-                    <h3>Jaringan Nirkabel</h3>
-                    <p>Memahami dasar-dasar wireless network, manajemen frekuensi, konfigurasi access point, serta implementasi enkripsi keamanan nirkabel.</p>
-                </div>
-                <div class="card">
-                    <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
-                    <h3>Akses & Desain Canva</h3>
-                    <p>Bisa mengakses Canva untuk membantu pembuatan visualisasi laporan teknis kuliah, diagram alur, poster informasi, dan materi presentasi agar lebih rapi.</p>
-                </div>
-            </div>
-        </section>
+body{
+    background:#0f172a;
+    color:white;
+}
 
-        <!-- PROYEK & PRAKTIKUM (PROJECTS) -->
-        <section id="praktikum">
-            <div class="section-header">
-                <h2>Proyek & <span>Praktikum</span></h2>
-                <p>Dokumentasi pengalaman praktis pengerjaan proyek IT (Semester 1-2)</p>
-            </div>
-            <div class="grid-3">
-                <!-- Proyek 1: Alat Deteksi Telur Busuk -->
-                <div class="card">
-                    <!-- Dokumentasi Foto Box & Skema Berdampingan -->
-                    <div style="display: flex; gap: 8px; margin-bottom: 15px;">
-                        <img src="elektronika1.jpg" alt="Foto Box Alat" style="width: 50%; height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="elektronika2.jpg" alt="Skema Rangkaian" style="width: 50%; height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                    </div>
-                    <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                    <h3>IoT Alat Deteksi Telur Busuk</h3>
-                    <p>Merancang dan membangun alat pendeteksi kualitas kebusukan telur berbasis Arduino menggunakan sensor LDR untuk membaca intensitas tingkat gelap/terangnya cahaya pada telur secara otomatis.</p>
-                </div>
-                <!-- Proyek 2: ZeroTier -->
-                <div class="card">
-                    <div class="icon-box"><i class="fa-solid fa-circle-nodes"></i></div>
-                    <h3>Implementasi ZeroTier VPN</h3>
-                    <p>Membangun infrastruktur Virtual Private Network (VPN) Mesh untuk menghubungkan konektivitas data dan komunikasi jarak jauh antar perangkat secara terenkripsi menggunakan ZeroTier One.</p>
-                </div>
-                <!-- Proyek 3: Clickjacking Checker Tool -->
-                <div class="card">
-                    <!-- Dokumentasi Aplikasi Utama (Atas) -->
-                    <img src="jaringan1.jpg" alt="Tampilan Web UI" style="width: 100%; height: 130px; object-fit: cover; border-radius: 6px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <!-- Dokumentasi Bukti Docker & CMD (Bawah Berdampingan) -->
-                    <div style="display: flex; gap: 8px; margin-bottom: 15px;">
-                        <img src="jaringan2.jpg" alt="Docker Desktop" style="width: 50%; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="jaringan3.jpg" alt="Bukti CMD Build" style="width: 50%; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                    </div>
-                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Clickjacking Checker Tool</h3>
-                    <p>Mengembangkan perangkat lunak penguji keamanan jaringan dan deteksi celah kerentanan web dari serangan clickjacking berbasis Python (Flask Framework) dan kontainerisasi Docker.</p>
-                </div>
-                <!-- Proyek 4: Jaringan Nirkabel -->
-                <div class="card">
-                    <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
-                    <h3>Jaringan Nirkabel (Wireless)</h3>
-                    <p>Praktik konfigurasi Access Point, implementasi protokol keamanan nirkabel (WPA2/WPA3), serta optimalisasi distribusi sinyal dalam jaringan lokal.</p>
-                </div>
-                <!-- Proyek 5: Simulasi Jaringan Cisco -->
-                <div class="card">
-                    <div class="icon-box"><i class="fa-solid fa-route"></i></div>
-                    <h3>Simulasi Jaringan Cisco</h3>
-                    <p>Mengonfigurasi topologi jaringan komputer dasar korporat, routing statis, switching, alokasi VLAN, dan manajemen subnetting IP Address dengan Cisco Packet Tracer.</p>
-                </div>
-                <!-- Proyek 6: Pembuatan Media Canva -->
-                <div class="card">
-                    <div class="icon-box"><i class="fa-solid fa-bezier-curve"></i></div>
-                    <h3>Pembuatan Media Canva</h3>
-                    <p>Bisa mengakses Canva untuk menyusun dan membuat visualisasi laporan tugas perkuliahan, infografis alur sistem jaringan, serta tata letak presentasi data.</p>
-                </div>
-            </div>
-        </section>
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
 
-        <!-- DATA DIRI & RIWAYAT PENDIDIKAN -->
-        <section id="info">
-            <div class="grid-2">
-                <!-- Info Pribadi -->
-                <div class="card">
-                    <h3><i class="fa-solid fa-user" style="color: var(--accent-orange); margin-right: 10px;"></i> Data Pribadi</h3>
-                    <div style="margin-top: 25px;">
-                        <ul class="info-list">
-                            <li><span class="label">TTL</span><span class="val">Sukoharjo, 1 November 2006</span></li>
-                            <li><span class="label">Alamat</span><span class="val">Tanjung, Bakalan, Polokarto, Sukoharjo (RT 04 / RW 09)</span></li>
-                            <li><span class="label">Status</span><span class="val">Mahasiswa Aktif</span></li>
-                            <li><span class="label">Keahlian</span><span class="val">Jaringan Komputer, IoT Arduino, Cisco Packet Tracer, Canva</span></li>
-                        </ul>
-                    </div>
-                </div>
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+}
 
-                <!-- Pendidikan -->
-                <div class="card">
-                    <h3><i class="fa-solid fa-graduation-cap" style="color: var(--accent-orange); margin-right: 10px;"></i> Riwayat Pendidikan</h3>
-                    <div style="margin-top: 25px;">
-                        <ul class="timeline">
-                            <li class="timeline-item">
-                                <div class="timeline-time">2025 - Sekarang</div>
-                                <div class="timeline-title">D3 Teknik Komputer</div>
-                                <div class="timeline-desc">Universitas Duta Bangsa</div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-time">2023 - 2025</div>
-                                <div class="timeline-title">SMA N 3 Sukoharjo</div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-time">2020 - 2023</div>
-                                <div class="timeline-title">SMP N 1 Polokarto</div>
-                            </li>
-                            <li class="timeline-item">
-                                <div class="timeline-time">2014 - 2020</div>
-                                <div class="timeline-title">MIM Tanjung</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
 
-        <!-- SECTION HUBUNGI SAYA -->
-        <section id="kontak" style="text-align: center;">
-            <div class="card" style="max-width: 700px; margin: 0 auto; padding: 40px 20px;">
-                <h2 style="color: #fff; margin-bottom: 15px;">Tertarik untuk Bekerja Sama?</h2>
-                <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 30px auto; font-size: 0.95rem;">
-                    Saya sangat terbuka untuk kesempatan magang, proyek IT, atau diskusi seputar perkembangan teknologi komputer.
-                </p>
-                <div class="btn-group" style="justify-content: center;">
-                    <a href="mailto:aliakbarcah8f@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Hubungi via Email</a>
-                    <a href="https://wa.me/6281575582809" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>
-                    <a href="https://github.com/aliakbarteknikkomputer" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> Profil GitHub</a>
-                </div>
-            </div>
-        </section>
-    </div>
+.logo span{
+    color:#38bdf8;
+}
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Ali Akbar | Mahasiswa Teknik Komputer UDB</p>
-        </div>
-    </footer>
-    
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 0;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero h2{
+    margin:15px 0;
+}
+
+.hero p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+.profile img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    border-radius:10px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    margin-right:10px;
+}
+
+section{
+    padding:50px 0;
+}
+
+.title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.card p,li{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+.project img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+}
+
+@media(max-width:700px){
+.hero{
+    flex-direction:column;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+<div class="logo">Ali<span>Akbar</span></div>
+
+<ul>
+<li><a href="#profil">Profil</a></li>
+<li><a href="#skill">Skill</a></li>
+<li><a href="#project">Project</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+
+</nav>
+
+
+<section class="hero" id="profil">
+
+<div class="hero-text">
+
+<h1>Ali Akbar</h1>
+
+<h2>Mahasiswa D3 Teknik Komputer</h2>
+
+<p>
+Mahasiswa D3 Teknik Komputer Universitas Duta Bangsa Surakarta
+dengan fokus bidang jaringan komputer, IoT, keamanan jaringan,
+serta pengembangan sistem berbasis mikrokontroler.
+</p>
+
+<a class="btn" href="mailto:aliakbarcah8f@gmail.com">
+Email
+</a>
+
+<a class="btn" href="https://wa.me/6281575582809">
+WhatsApp
+</a>
+
+</div>
+
+
+<div class="profile">
+<img src="foto-profil.jpg">
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2 class="title">Data Pribadi</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Kontak</h3>
+<p>
+Email : aliakbarcah8f@gmail.com
+<br>
+WhatsApp : 081575582809
+<br>
+Alamat : Tanjung, Bakalan, Polokarto, Sukoharjo
+</p>
+</div>
+
+
+<div class="card">
+<h3>Pendidikan</h3>
+
+<ul>
+<li>SMA N 3 Sukoharjo (2023 - 2025)</li>
+<li>D3 Teknik Komputer Universitas Duta Bangsa (2025 - Sekarang)</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="skill">
+
+<h2 class="title">Skill</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Hard Skill</h3>
+
+<ul>
+<li>Administrasi Jaringan & Subnetting IP</li>
+<li>Cisco Packet Tracer</li>
+<li>ZeroTier VPN Mesh</li>
+<li>Arduino & Mikrokontroler</li>
+<li>Sensor Elektronika LDR</li>
+<li>Python Dasar & Web Security</li>
+<li>Docker / Flask</li>
+<li>Canva Design</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>Soft Skill</h3>
+
+<ul>
+<li>Adaptasi cepat</li>
+<li>Inisiatif tinggi</li>
+<li>Ketelitian teknis</li>
+<li>Bertanggung jawab</li>
+<li>Kerja sama tim</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="project">
+
+<h2 class="title">Project & Praktikum</h2>
+
+
+<div class="grid">
+
+
+<div class="card project">
+
+<img src="elektronika1.jpg">
+
+<h3>IoT Deteksi Telur Busuk</h3>
+
+<p>
+Membuat alat pendeteksi kualitas telur menggunakan Arduino
+dan sensor LDR untuk membaca intensitas cahaya.
+</p>
+
+</div>
+
+
+
+<div class="card project">
+
+<img src="jaringan3.jpg">
+
+<h3>Implementasi ZeroTier VPN</h3>
+
+<p>
+Membangun jaringan VPN Mesh menggunakan ZeroTier
+untuk koneksi antar perangkat secara aman.
+</p>
+
+</div>
+
+
+
+
+<div class="card project">
+
+<img src="jaringan1.jpg">
+
+<h3>Clickjacking Checker Tool</h3>
+
+<p>
+Membuat aplikasi pengecekan keamanan website
+terhadap serangan clickjacking menggunakan Flask.
+</p>
+
+</div>
+
+
+
+
+<div class="card project">
+
+<img src="jaringan2.jpg">
+
+<h3>Deployment Docker</h3>
+
+<p>
+Melakukan deployment aplikasi menggunakan Docker
+berbasis container.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<section id="kontak">
+
+<h2 class="title">Hubungi Saya</h2>
+
+<div class="card">
+
+<p>
+Terbuka untuk kesempatan magang, proyek IT,
+dan pengembangan teknologi komputer.
+</p>
+
+<br>
+
+<a class="btn" href="mailto:aliakbarcah8f@gmail.com">
+Email Saya
+</a>
+
+<a class="btn" href="https://wa.me/6281575582809">
+Chat WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+</div>
+
+
+<footer>
+© 2026 Ali Akbar | D3 Teknik Komputer UDB
+</footer>
+
+
+</body>
+</html>
